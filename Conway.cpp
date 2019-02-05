@@ -2,7 +2,9 @@
 
 class Conway{
 	int X, Y;
-	boolean2DVector grid;
+	boolean2dVector grid;
+
+	Conway(int grid_size) : X(grid_size), Y(grid_size) {}
+
 };
 
-Conway::Conway(int grid_size) : X(grid_size), Y(grid_size) {}
