@@ -3,6 +3,8 @@
 
 #include "Grid.h"
 #include "dataTypes.h"
+#include <vector>
+#include <ostream>
 
 class Conway{
 	private:
@@ -14,7 +16,12 @@ class Conway{
 
         public:
        		Conway(int grid_sz);
-	        boolean2dVector updateGrid(Grid oldGrid);
+		// Updates the grid
+	        void updateGrid();
+		// returns and updated grid, based on the given grid
+	        boolean2dVector updatedGrid(Grid oldGrid);
+		void setAlive(std::vector<int> XCoords, std::vector<int> YCoords, int xPos, int yPos);
+	        friend std::ostream& operator<< (std::ostream& stream, const Conway& peli);
 
 };
 
